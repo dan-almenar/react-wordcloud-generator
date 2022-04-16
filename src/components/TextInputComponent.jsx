@@ -1,20 +1,19 @@
 import { useState, createRef } from 'react'
-// import './App.css'
 
 function FormFileUpload() {
   const fileInput = createRef()
-  const [fileName, setFileName] = useState('(.pdf, .docx, .doc, .txt, .rtf, .odt)')
+  const [fileName, setFileName] = useState('(.doc, .txt)')
 
-  const readFile = (e) => {
+  const readUploadedFile = (e) => {
     const file = fileInput.current.files[0]
-    const reader = new FileReader()
-    reader.onload = (e) => {
+      const reader = new FileReader()
+      reader.onload = (e) => {
       console.log(e.target.result)
     }
     reader.readAsText(file)
 
     // clear file input
-    setFileName('(.pdf, .docx, .doc, .txt, .rtf, .odt)')
+    setFileName('(.doc, .txt)')
 
     // console.log(fileInput.current.files.length > 0 ? fileInput.current.files[0].name : 'No file selected')
   }
@@ -46,7 +45,7 @@ function FormFileUpload() {
       </div>
 
       <div className="container">
-          <button onClick={readFile} className="button is-fullwidth mt-5">Cargar</button>
+          <button onClick={readUploadedFile} className="button is-fullwidth mt-5">Cargar</button>
         </div>      
     </div>
   )
