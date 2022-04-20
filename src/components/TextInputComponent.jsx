@@ -25,10 +25,10 @@ function FormFileUpload() {
       }
       reader.readAsText(file)
     }
-    if (textInput.value.length > 0) {
+    if (textInput.length > 0) {
       setTextProp({
         textFromFile: textProp.textFromFile,
-        textFromInput: textInput.value
+        textFromInput: textInput
       })
       setTextInput('')
     }
@@ -41,7 +41,7 @@ function FormFileUpload() {
   }
 
   const getText = (e) => {
-    setTextInput({value: e.target.value.trim().toLowerCase()})
+    setTextInput(e.target.value.trim().toLowerCase())
   }
 
   const getFileName = () => {

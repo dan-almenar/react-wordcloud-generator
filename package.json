@@ -8,8 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@nlpjs/lang-es": "^4.23.4",
+    "@nlpjs/core": "^4.23.4",
     "bulma": "^0.9.3",
+    "lorca-nlp": "^1.0.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-wordcloud": "^1.2.7",
