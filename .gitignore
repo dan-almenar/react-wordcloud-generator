@@ -25,3 +25,4 @@ dist-ssr
 
 # temporary
 src/components/PaletteSelector.jsx
+src/components/RadioButton.jsx

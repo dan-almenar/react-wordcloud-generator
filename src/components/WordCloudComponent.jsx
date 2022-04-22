@@ -7,6 +7,7 @@ function WorldCloudGenerator (props) {
     const inputText = props.text
     let [text, setText] = useState(props.text.split(' '))
     const wordCloudRef = createRef()
+    const palette = props.palette
     
     const processText = () => {
         // process text with lorca
@@ -47,17 +48,21 @@ function WorldCloudGenerator (props) {
                 // text length is at least 70.
                 // The wordcloud will include the first up-to-70 entries with the highest value.
                 const mapped = text.map((word) => {
-                    return {text: word, value: (lorcaText[word] *3)}
+                    return {text: word, value: Math.floor(Math.random() * (lorcaText[word] *100)) +80}
                 })
-                return mapped.sort((a, b) => b.value - a.value).slice(70)
+                return mapped.sort((a, b) => b.value - a.value).slice(0, 70)
             }
        }
     }
     // wordcloud options
-    const options = {
-        rotations: 2,
-        rotationAngles: [-90, -45, 0, 45, 90],
-    };
+    const setOptions = () => {
+        let options = {
+            rotations: 2,
+            rotationAngles: [-90, -45, 0, 45, 90],
+        }
+        palette.length > 0 ? options.colors = palette : options = options
+        return options
+    }
 
     const downloadImage = () => {
         const svgElement = wordCloudRef.current.querySelector('svg')
@@ -66,7 +71,7 @@ function WorldCloudGenerator (props) {
 
   return (
       <div className='container mt-5 mb-5' ref={wordCloudRef}>
-            <ReactWordcloud words={cloudText()} options={options} />
+            <ReactWordcloud words={cloudText()} options={setOptions()} />
         <button onClick={downloadImage} className="button mb-5 is-fullwidth">
             <i className="material-icons-outlined">file_download</i>
             Descargar
