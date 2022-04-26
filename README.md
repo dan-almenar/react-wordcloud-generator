@@ -12,10 +12,6 @@ La nube generada puede ser descargada en formato .jpg.
 ## Última versión pública:
 [Nube de Palabras](https://get-wordcloud.netlify.app)
 
-## Funcionalidades actualmente en desarrollo:
-- Selector de paleta de colores.
-- Funcionalidad de PWA.
-- Routing.
 
 ## Nota:
 La app utiliza la librería [react-wordcloud](https://www.npmjs.com/package/react-wordcloud), que requiere la versión 16.13.0 de React.
@@ -26,6 +22,7 @@ npm install --legacy-peer-deps
 ```
 
 ## Galería de imágenes:
-![imagen de prueba](wordcloud-generator.jpg)
+![Imagen con colores aleatorios](wordcloud-generator.jpg)
+![Con paleta de colores aplicada](wordcloud_palette.jpg)
 
 
