@@ -124,7 +124,7 @@ function App() {
             }
             <input onChange={getPalette} className='mt-5' type="radio" name="color" id="random" value={'random'} checked />
             <label htmlFor="random" className='subtitle ml-3'>Aleatorio</label>
-            <div className="buttons is-flex is-justify-content-space-around ml-5 mr-5">
+            <div className="buttons is-flex is-justify-content-space-evenly ml-5 mr-5">
               <PreviousButton onClick={toTextInput} text="Anterior" icon="navigate_before" />
               <NextButton onClick={showValues} text="Generar nube" icon="navigate_next" />            
             </div>              
