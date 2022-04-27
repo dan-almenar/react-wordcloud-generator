@@ -31,7 +31,7 @@ function About
                             </p>
                         </div>
                         <div className="column">
-                            <img className='image is-120x120' src="/public/wordcloud-generator.jpg" alt="example image" />
+                            <img className='image is-120x120' src="/wordcloud-generator.jpg" alt="example image" />
                         </div>
                     </div>
                 </div>

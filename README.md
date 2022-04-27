@@ -22,7 +22,7 @@ npm install --legacy-peer-deps
 ```
 
 ## Galería de imágenes:
-![Imagen con colores aleatorios](/public/wordcloud-generator.jpg)
-![Con paleta de colores aplicada](/public/wordcloud_palette.jpg)
+![Imagen con colores aleatorios](src/public/wordcloud-generator.jpg)
+![Con paleta de colores aplicada](src/public/wordcloud_palette.jpg)
 
 
